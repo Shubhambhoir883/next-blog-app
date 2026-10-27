@@ -1,0 +1,100 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(var(--nav-bg, 10, 10, 15), 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+}
+
+@media (prefers-color-scheme: light) {
+  .navbar {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.brandIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+
+.brandText {
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navLink {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--foreground);
+  opacity: 0.75;
+  transition: opacity 0.2s, color 0.2s;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+}
+
+.navLink:hover {
+  opacity: 1;
+  color: #6366f1;
+}
+
+.activeNavLink {
+  opacity: 1;
+  color: #6366f1;
+  font-weight: 600;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #ffffff !important;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4);
+}
